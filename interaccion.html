@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interaction</title>
+
+    <style>
+        .pelota {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            /* background-color: red; */
+            /* transition-property: width, height , background-color; */
+            /* transition-duration: 3s; */
+            /* transition-delay: 2s; */
+            /* transition-timing-function: ease-in-out; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: 1s ease;
+        }
+
+        .pelota.a {
+            background-color: red;
+            left: 0;
+        }
+
+        .pelota.b {
+            background-color: rgb(0, 26, 255);
+            right: 0;
+        }
+
+
+        .canasta {
+            height: 200px;
+            position: relative;
+            border: solid red 2px;
+        }
+
+        .canasta:hover .pelota {
+            border: solid red 1px;
+            width: 200px;
+            height: 200px;
+            /* background-color: rgb(0, 26, 255); */
+        }
+
+        .canasta:hover .pelota.a {
+            left: calc(50% - 200px);
+
+        }
+
+        .canasta:hover .pelota.b {
+            right: calc(50% - 200px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="canasta">
+        <div class="pelota a">Hola</div>
+        <div class="pelota b">Mundo</div>
+    </div>
+</body>
+
+</html>

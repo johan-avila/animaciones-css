@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate</title>
+
+    <style>
+        body{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            perspective: 200px;
+            perspective-origin: top;
+        }
+        .container{
+             border: solid 2px red;
+        }
+        .cuadrado{
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            width: 200px;
+            height: 200px;
+            background-color: #7dc900;
+            margin: 20px;
+            transition: 1s;
+
+        }
+        .container:hover .cuadrado {
+            /* transform: rotateZ( calc(306deg * 80) ); */
+            /*---------- transform: rotate3d(x,y,z, rotate()) ; */
+            /* transform: rotate3d( 1, 0, 0, 45deg ); */
+            /* transform: rotate3d(1, 1, 1, 360deg); */
+            transform: translateZ(130px);
+            
+        }
+       
+
+        
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="cuadrado">Hola mundo </div>
+    </div>
+
+</body>
+</html>
